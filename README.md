@@ -1,4 +1,4 @@
-## Weex Language Syntax Highlighting
+## Weex Vue Language Syntax Highlighting
 
 ## License
 [MIT](https://raw.githubusercontent.com/alibaba/Thera/master/README.md)

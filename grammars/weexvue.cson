@@ -115,48 +115,48 @@
 ]
 'repository':
   "vue-directive":
-    name: "meta.directive.vue"
-    begin: "(?:\\b(v-)|(:|@))([a-zA-Z][0-9a-zA-Z\\-\\:\\.]+)\\s*(=)"
-    end: "(?<='|\")"
-    captures:
+    "name": "meta.directive.vue"
+    "begin": "(?:\\b(v-)|(:|@))([a-zA-Z][0-9a-zA-Z\\-\\:\\.]+)\\s*(=)"
+    "end": "(?<='|\")"
+    "captures":
       "1":
-        name: "entity.other.attribute-name.html"
+        "name": "entity.other.attribute-name.html"
       "2":
-        name: "punctuation.separator.key-value.html"
+        "name": "punctuation.separator.key-value.html"
       "3":
-        name: "entity.other.attribute-name.html"
+        "name": "entity.other.attribute-name.html"
       "4":
-        name: "punctuation.separator.key-value.html"
-    patterns:[
+        "name": "punctuation.separator.key-value.html"
+    "patterns":[
       {
-        name: "source.directive.vue"
-        begin: "\""
-        beginCaptures:
+        "name": "source.directive.vue"
+        "begin": "\""
+        "beginCaptures":
           "0":
-            name: "punctuation.definition.string.begin.html"
-        end: "\""
-        endCaptures:
+            "name": "punctuation.definition.string.begin.html"
+        "end": "\""
+        "endCaptures":
           "0":
-            name: "punctuation.definition.string.end.html"
-        patterns: [
+            "name": "punctuation.definition.string.end.html"
+        "patterns": [
           {
-            include: "source.js"
+            "include": "source.js"
           }
         ]
       }
       {
-        name: "source.directive.vue"
-        begin: "'"
-        beginCaptures:
+        "name": "source.directive.vue"
+        "begin": "'"
+        "beginCaptures":
           "0":
-            name: "punctuation.definition.string.begin.html"
-        end: "'"
-        endCaptures:
+            "name": "punctuation.definition.string.begin.html"
+        "end": "'"
+        "endCaptures":
           "0":
-            name: "punctuation.definition.string.end.html"
-        patterns: [
+            "name": "punctuation.definition.string.end.html"
+        "patterns": [
           {
-            include: "source.js"
+            "include": "source.js"
           }
         ]
       }

@@ -27,7 +27,7 @@
   }
   {
     # 设置tag的颜色
-    'begin': '(</?)((?i:template|container|text|textarea|slider|image|div|list|cell|input|a|name|img)\\b)'
+    'begin': '(</?)((?i:template|container|text|textarea|slider|image|div|list|cell|input|a|name|img|switch)\\b)'
     'beginCaptures':
       '1':
         'name': 'punctuation.definition.tag.html'
@@ -208,7 +208,7 @@
     'name': 'string.quoted.double.html'
   'tag-generic-attribute':
     # 'match': '(?<=[^=])\\b([a-zA-Z0-9:-]+)' #__dengxu
-    'match': '(?<=[^=])[\\s\\t](class|repeat|onclick|src|ref|type|value|oninput|items|style|height|width)\\b'
+    'match': '(?<=[^=])[\\s\\t](checked|enabled|disabled|class|repeat|onclick|src|ref|type|value|oninput|items|style|height|width|autofocus)\\b'
     'name': 'entity.other.attribute-name.html'
   'string-single-quoted':
     'begin': '\''

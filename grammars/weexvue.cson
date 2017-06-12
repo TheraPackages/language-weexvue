@@ -62,10 +62,12 @@
   {
     # 'begin': '<((?i:style))\\s*>' 为了标签内部就开始生效作用域，使用下面的方式
     # 'begin': '(?:^\\s+)?(<)((?i:style))\\b(?![^>]*/>)' 为了style可以有自己的属性使用下面的方式
-    'begin': '<((?:style))(\\s+scoped)?\\s*>'
+    'begin': '<(style)(\\s+scoped)?\\s*>'
     'beginCaptures':
-      '2':
+      '1':
         'name': 'entity.name.tag.structure.any.html'
+      '2':
+        'name': 'entity.other.attribute-name.html'
     'end': '</((?i:style))[^>]*>'
     'endCaptures':
       '1':

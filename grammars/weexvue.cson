@@ -62,16 +62,24 @@
   {
     # 'begin': '<((?i:style))\\s*>' 为了标签内部就开始生效作用域，使用下面的方式
     # 'begin': '(?:^\\s+)?(<)((?i:style))\\b(?![^>]*/>)' 为了style可以有自己的属性使用下面的方式
-    'begin': '<(style)(\\s+scoped)?\\s*>'
+    'begin': '(<)(style)(\\s+scoped)?\\s*(>)'
     'beginCaptures':
       '1':
-        'name': 'entity.name.tag.structure.any.html'
+        'name': 'punctuation.definition.tag.html'
       '2':
+        'name': 'entity.name.tag.structure.any.html'
+      '3':
         'name': 'entity.other.attribute-name.html'
-    'end': '</((?i:style))[^>]*>'
+      '4':
+        'name': 'punctuation.definition.tag.html'
+    'end': '(</)((?i:style))[^>]*(>)'
     'endCaptures':
       '1':
+        'name': 'punctuation.definition.tag.html'
+      '2':
         'name': 'entity.name.tag.structure.any.html'
+      '3':
+        'name': 'punctuation.definition.tag.html'
     'name': 'source.css.embedded.tag'
     'patterns': [
       {
@@ -80,14 +88,22 @@
     ]
   }
   {
-    'begin': '<((?:script))[^>]*>'
+    'begin': '(<)((?:script))[^>]*(>)'
     'beginCaptures':
       '1':
+        'name': 'punctuation.definition.tag.html'
+      '2':
         'name': 'entity.name.tag.script.html'
-    'end': '</((?i:script))>' #匹配最后一个字符
+      '3':
+        'name': 'punctuation.definition.tag.html'
+    'end': '(</)((?i:script))(>)' #匹配最后一个字符
     'endCaptures':
       '1':
+        'name': 'punctuation.definition.tag.html'
+      '2':
         'name': 'entity.name.tag.script.html'
+      '3':
+        'name': 'punctuation.definition.tag.html'
     'name': 'source.js.embedded'
     'patterns': [
       {
